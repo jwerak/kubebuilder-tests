@@ -386,6 +386,8 @@ func (r *CronJobReconciler) SetupWithManager(mgr ctrl.Manager) error {
 		Complete(r)
 }
 
+var cronjoblog = logf.Log.WithName("cronjob-resource")
+
 type realClock struct{}
 
 func (_ realClock) Now() time.Time { return time.Now() }
