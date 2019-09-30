@@ -103,6 +103,7 @@ type CronJobStatus struct {
 }
 
 // +kubebuilder:object:root=true
+// +kubebuilder:subresource:status
 
 // CronJob is the Schema for the cronjobs API
 type CronJob struct {
@@ -114,7 +115,6 @@ type CronJob struct {
 }
 
 // +kubebuilder:object:root=true
-// +kubebuilder:subresource:status
 
 // CronJobList contains a list of CronJob
 type CronJobList struct {

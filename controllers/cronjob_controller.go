@@ -74,7 +74,6 @@ func (r *CronJobReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) {
 		// on deleted requests.
 		return ctrl.Result{}, ignoreNotFound(err)
 	}
-
 	var childJobs kbatch.JobList
 	if err := r.List(ctx, &childJobs, client.InNamespace(req.Namespace), client.MatchingField(jobOwnerKey, req.Name)); err != nil {
 		log.Error(err, "unable to list child Jobs")
@@ -385,8 +384,6 @@ func (r *CronJobReconciler) SetupWithManager(mgr ctrl.Manager) error {
 		Owns(&kbatch.Job{}).
 		Complete(r)
 }
-
-var cronjoblog = logf.Log.WithName("cronjob-resource")
 
 type realClock struct{}
 
