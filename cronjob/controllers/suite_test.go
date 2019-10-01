@@ -22,7 +22,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	batchv1 "github.com/jwerak/kubebuilder-tests/api/v1"
+	batchv1 "github.com/jwerak/kubebuilder-tests/cronjob/api/v1"
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
 	"sigs.k8s.io/controller-runtime/pkg/client"

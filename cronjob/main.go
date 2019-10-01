@@ -13,14 +13,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package main
+package cronjob
 
 import (
 	"flag"
 	"os"
 
-	batchv1 "github.com/jwerak/kubebuilder-tests/api/v1"
-	"github.com/jwerak/kubebuilder-tests/controllers"
+	batchv1 "github.com/jwerak/kubebuilder-tests/cronjob/api/v1"
+	"github.com/jwerak/kubebuilder-tests/cronjob/controllers"
 	kbatchv1 "k8s.io/api/batch/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
