@@ -1,4 +1,4 @@
-module github.com/jwerak/kubebuilder-tests
+module github.com/jwerak/kubebuilder-tests/cronjob
 
 go 1.13
 
